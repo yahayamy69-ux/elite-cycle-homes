@@ -1,0 +1,9 @@
+.elite-app {
+  min-height: 100vh;
+  background: #fff;
+  color: #1f2937;
+}
+
+.elite-app * {
+  box-sizing: border-box;
+}
