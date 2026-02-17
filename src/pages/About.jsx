@@ -1,24 +1,27 @@
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import Footer from '../components/Footer';
 import styles from './About.module.css';
 
 function About({ onNavigate }) {
+  const [ref, visible] = useScrollReveal(0.2);
+
   return (
     <>
-      <main className={styles.page}>
-        <h1 className={styles.title}>About Elite Cycle Homes</h1>
-        <section className={styles.section}>
+      <main ref={ref} className={styles.page}>
+        <h1 className={`${styles.title} ${visible ? styles.visible : ''}`}>About Elite Cycle Homes</h1>
+        <section className={`${styles.section} ${visible ? styles.visible : ''}`}>
           <h2>Our Mission</h2>
           <p>
             To redefine the real estate landscape in Abuja by delivering premium homes and investment opportunities for business-focused individuals. We combine smart properties with reliable ownership for elite living.
           </p>
         </section>
-        <section className={styles.section}>
+        <section className={`${styles.section} ${visible ? styles.visible : ''}`}>
           <h2>Our Vision</h2>
           <p>
             To be the trusted choice for young professionals and entrepreneurs seeking quality smart homes in prime locations like Katampe Extension, with transparency and secure documentation at every step.
           </p>
         </section>
-        <section className={styles.section}>
+        <section className={`${styles.section} ${visible ? styles.visible : ''}`}>
           <h2>Why Trust Us</h2>
           <ul>
             <li>Transparency and secure documentation from start to finish</li>

@@ -1,14 +1,14 @@
 .section {
   padding: 4rem 2rem;
-  background: #f8fafc;
-  color: #1f2937;
+  background: linear-gradient(180deg, #1e3a5f 0%, #1e40af 100%);
+  color: #fff;
 }
 
 .heading {
   text-align: center;
   font-size: 1.75rem;
   margin: 0 0 2rem;
-  color: #1e3a5f;
+  color: #fff;
 }
 
 .grid {
@@ -20,11 +20,19 @@
 }
 
 .card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
   padding: 1.5rem;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.grid.visible .card {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .stars {
@@ -50,11 +58,12 @@
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0 0 0.75rem;
-  color: #4b5563;
+  color: #1e3a5f;
 }
 
 .name {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #1e40af;
+  font-weight: 500;
   margin: 0;
 }

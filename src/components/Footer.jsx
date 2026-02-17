@@ -21,6 +21,7 @@ function Footer({ currentPage, onNavigate }) {
             <li><a href="/" onClick={go('home')}>Home</a></li>
             <li><a href="/about" onClick={go('about')}>About</a></li>
             <li><a href="/locations" onClick={go('locations')}>Explore Listings</a></li>
+            <li><a href="/features" onClick={go('features')}>Estate Features</a></li>
             <li><a href="/contact" onClick={go('contact')}>Contact</a></li>
           </ul>
         </div>

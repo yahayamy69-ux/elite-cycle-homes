@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import styles from './MeetTheTeam.module.css';
 
 const TEAM = [
@@ -8,12 +9,26 @@ const TEAM = [
 ];
 
 function MeetTheTeam() {
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) setVisible(true);
+      },
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) obs.observe(sectionRef.current);
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <section className={styles.section}>
+    <section ref={sectionRef} className={styles.section}>
       <h2 className={styles.heading}>Meet the Team</h2>
-      <div className={styles.grid}>
-        {TEAM.map((member) => (
-          <div key={member.name} className={styles.card}>
+      <div className={`${styles.grid} ${visible ? styles.visible : ''}`}>
+        {TEAM.map((member, i) => (
+          <div key={member.name} className={styles.card} style={{ animationDelay: `${i * 0.1}s` }}>
             <div className={styles.avatar}>
               {member.image ? (
                 <img src={member.image} alt={member.name} />

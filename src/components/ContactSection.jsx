@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './ContactSection.module.css';
 
 const OFFICE_ADDRESS = 'NOVARE CENTRAL WUSE ZONE 5, ABUJA.';
-const EMAIL = 'elitecyclehomeslimited@gmail.com';
+const EMAIL = 'elitecyclehomesltd@gmail.com';
 const PHONE = '0707 274 4865';
 const INSTAGRAM = 'https://www.instagram.com/elitecyclehomes?igsh=dDMxeDRoaXBtcWtj&utm_source=qr';
 const TIKTOK = 'https://www.tiktok.com/@elite.cycle?_r=1&_t=ZS-93xSOYXSGvN';
@@ -62,24 +62,27 @@ function ContactSection() {
     <section className={styles.section} id="contact">
       <div className={styles.wrap}>
         <div className={styles.info}>
-          <h2 className={styles.heading}>Contact Us</h2>
-          <div className={styles.logoBlock}>
-            <img src="/logo.png" alt="Elite Cycle Homes" className={styles.logoImg} />
-          </div>
+          <h2 className={styles.heading}>Get in Touch</h2>
           <p className={styles.officeLabel}>Office address</p>
           <div className={styles.lines}>
             <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(OFFICE_ADDRESS)}`} className={styles.line} target="_blank" rel="noopener noreferrer">
               <span className={styles.icon}><IconLocation /></span>
               <span>{OFFICE_ADDRESS}</span>
             </a>
-            <a href={`mailto:${EMAIL}`} className={styles.line}>
-              <span className={styles.icon}><IconMail /></span>
-              <span>{EMAIL}</span>
-            </a>
-            <a href={`tel:${PHONE.replace(/\s/g, '')}`} className={styles.line}>
-              <span className={styles.icon}><IconPhone /></span>
-              <span>{PHONE}</span>
-            </a>
+          </div>
+          <div className={styles.contactBlocks}>
+            <div className={styles.contactBlock}>
+              <span className={styles.contactBlockTitle}>Call us</span>
+              <a href={`tel:${PHONE.replace(/\s/g, '')}`} className={styles.contactBlockLink}>
+                <IconPhone /> {PHONE}
+              </a>
+            </div>
+            <div className={styles.contactBlock}>
+              <span className={styles.contactBlockTitle}>Write us</span>
+              <a href={`mailto:${EMAIL}`} className={styles.contactBlockLink}>
+                <IconMail /> {EMAIL}
+              </a>
+            </div>
           </div>
           <p className={styles.socialLabel}>Follow us</p>
           <div className={styles.socialButtons}>

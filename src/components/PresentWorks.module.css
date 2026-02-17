@@ -1,6 +1,8 @@
 .section {
   padding: 4rem 2rem;
   background: #fff;
+  border-top: 1px solid #e0f2fe;
+  border-bottom: 1px solid #e0f2fe;
 }
 
 .heading {
@@ -31,11 +33,18 @@
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e7eb;
-  transition: transform 0.2s, box-shadow 0.2s;
   padding: 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.2s;
 }
 
-.card:hover {
+.grid.visible .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grid.visible .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }

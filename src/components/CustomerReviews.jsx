@@ -1,3 +1,4 @@
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import styles from './CustomerReviews.module.css';
 
 const REVIEWS = [
@@ -22,12 +23,14 @@ function StarRating({ rating }) {
 }
 
 function CustomerReviews() {
+  const [ref, visible] = useScrollReveal(0.15);
+
   return (
-    <section className={styles.section}>
+    <section ref={ref} className={styles.section}>
       <h2 className={styles.heading}>What Our Clients Say</h2>
-      <div className={styles.grid}>
-        {REVIEWS.map((review) => (
-          <div key={review.name} className={styles.card}>
+      <div className={`${styles.grid} ${visible ? styles.visible : ''}`}>
+        {REVIEWS.map((review, i) => (
+          <div key={review.name} className={styles.card} style={{ transitionDelay: visible ? `${i * 0.08}s` : 0 }}>
             <StarRating rating={review.rating} />
             <p className={styles.text}>"{review.text}"</p>
             <p className={styles.name}>— {review.name}</p>

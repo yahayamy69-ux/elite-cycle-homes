@@ -15,6 +15,7 @@ function Navbar({ currentPage, onNavigate }) {
         <li><a href="/" onClick={go('home')} className={currentPage === 'home' ? styles.active : ''}>Home</a></li>
         <li><a href="/about" onClick={go('about')} className={currentPage === 'about' ? styles.active : ''}>About</a></li>
         <li><a href="/locations" onClick={go('locations')} className={currentPage === 'locations' ? styles.active : ''}>Explore Listings</a></li>
+        <li><a href="/features" onClick={go('features')} className={currentPage === 'features' ? styles.active : ''}>Estate Features</a></li>
         <li><a href="/contact" onClick={go('contact')} className={currentPage === 'contact' ? styles.active : ''}>Contact</a></li>
       </ul>
     </nav>

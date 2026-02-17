@@ -7,7 +7,7 @@ function Hero({ onExploreListings }) {
       <div className={styles.content}>
         <h1 className={styles.title}>Elite Cycle Homes</h1>
         <p className={styles.motto}>
-          Redefining the real estate landscape in Abuja, Elite Cycle Homes provides premium homes and investment opportunities for business-focused individuals. Smart properties. Reliable ownership. Elite living.
+          Luxury living in strategic locations across Abuja
         </p>
         <button type="button" className={styles.cta} onClick={onExploreListings}>
           Explore Listings
