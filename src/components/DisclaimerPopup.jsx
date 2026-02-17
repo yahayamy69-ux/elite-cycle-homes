@@ -25,9 +25,9 @@ function DisclaimerPopup() {
         </div>
 
         <div className={styles.disclaimerBox}>
-          <h3 className={styles.disclaimerTitle}>BEWARE OF FRAUD</h3>
+          <h3 className={styles.disclaimerTitle}>LEGAL DISCLAIMER</h3>
           <p className={styles.text}>
-            Scammers regularly impersonate our company to defraud unsuspecting customers. Always verify payment details and communications directly through our official channels:
+            Verify all payments through our official channels only:
           </p>
           <ul className={styles.contactList}>
             <li>📞 Phone: <strong>0707 274 4865</strong></li>
@@ -35,7 +35,7 @@ function DisclaimerPopup() {
             <li>📍 Office: <strong>NOVARE CENTRAL WUSE ZONE 5, ABUJA</strong></li>
           </ul>
           <p className={styles.text}>
-            <strong>Legal Disclaimer:</strong> Elite Cycle Homes Limited bears NO responsibility for any financial losses if you get scammed by fraudsters impersonating our company. Always verify authenticity before making any payment.
+            <strong>Liability Waiver:</strong> Elite Cycle Homes Limited is not responsible for any losses incurred through unauthorized third parties or fraudulent schemes. All transactions must be verified directly with our company before payment.
           </p>
         </div>
 
