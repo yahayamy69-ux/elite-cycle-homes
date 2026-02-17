@@ -64,7 +64,7 @@ const RESPONSES = {
 };
 
 function Chatbot() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     { type: 'bot', text: 'Hello! 👋 How can we be of help today?' }
   ]);

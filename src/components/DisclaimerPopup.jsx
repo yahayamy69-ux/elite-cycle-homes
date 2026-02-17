@@ -21,14 +21,17 @@ function DisclaimerPopup() {
   return (
     <div className={styles.overlay} role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
       <div className={styles.modal}>
+        <button type="button" className={styles.closeBtn} onClick={handleClose} aria-label="Close disclaimer">
+          ✕
+        </button>
         <h2 id="disclaimer-title" className={styles.title}>Important Notice</h2>
         <p className={styles.text}>
           Elite Cycle Homes Limited does <strong>not</strong> accept payments for our services through personal bank accounts. 
           Please beware of scammers who may impersonate our company. Always verify payment details directly with us before making any transactions.
         </p>
-        <button type="button" className={styles.btn} onClick={handleClose}>
-          I Understand
-        </button>
+        <p className={styles.text}>
+          <strong>Disclaimer:</strong> Elite Cycle Homes bears no responsibility if you end up getting scammed by fraudsters impersonating our company. Always verify all communications and payment details directly through our official channels.
+        </p>
       </div>
     </div>
   );
