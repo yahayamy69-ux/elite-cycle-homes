@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './AffiliateAgents.module.css';
+import LiquidEther from './LiquidEther';
 
 function AffiliateAgents() {
   const ref = useRef(null);
@@ -16,7 +17,26 @@ function AffiliateAgents() {
 
   return (
     <section ref={ref} className={styles.section}>
-      <div className={`${styles.content} ${visible ? styles.visible : ''}`}>
+      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+        <LiquidEther
+          colors={['#1e40af', '#2563eb', '#1e3a8a']}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+        />
+      </div>
+      <div className={`${styles.content} ${visible ? styles.visible : ''}`} style={{ position: 'relative', zIndex: 1 }}>
         <h2 className={styles.heading}>Join Elite Cycle Homes Associates Network</h2>
         <p className={styles.greeting}>Assalamu Alaikum and welcome!</p>
         

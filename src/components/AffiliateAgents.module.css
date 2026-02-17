@@ -1,7 +1,9 @@
 .section {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #1e3a8a 100%);
   text-align: left;
+  position: relative;
+  overflow: hidden;
 }
 
 .content {
@@ -28,7 +30,7 @@
 .greeting {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffd700;
+  color: #fff;
   margin: 0 0 1.5rem;
   text-align: center;
   letter-spacing: 0.05em;
@@ -36,7 +38,7 @@
 
 .mainText {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   line-height: 1.8;
   margin: 1.5rem 0;
 }
@@ -46,7 +48,7 @@
 }
 
 .mainText strong {
-  color: #ffd700;
+  color: #fff;
 }
 
 .subHeading {
@@ -58,7 +60,7 @@
 
 .highlightBox {
   background: rgba(255, 255, 255, 0.1);
-  border-left: 4px solid #ffd700;
+  border-left: 4px solid #fff;
   padding: 1.5rem;
   border-radius: 8px;
   margin: 2rem 0;
@@ -68,7 +70,7 @@
 .highlightBox h3 {
   margin: 0 0 1rem;
   font-size: 1.25rem;
-  color: #ffd700;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -92,7 +94,7 @@
 
 .benefitsList li::before {
   content: '✓ ';
-  color: #ffd700;
+  color: #fff;
   font-weight: bold;
   margin-right: 0.5rem;
 }
@@ -109,13 +111,13 @@
   margin: 2rem 0;
   padding: 1rem 2.5rem;
   background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-  color: #1e3a5f;
+  color: #1e40af;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 700;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
   text-align: center;
   cursor: pointer;
 }
@@ -139,7 +141,7 @@
 }
 
 .signature strong {
-  color: #ffd700;
+  color: #fff;
   font-style: normal;
 }
 

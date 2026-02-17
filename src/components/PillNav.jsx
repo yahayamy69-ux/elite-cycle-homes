@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import styles from './PillNav.module.css';
-import LightPillar from './LightPillar';
 
 function PillNav({ 
   logo,
@@ -45,22 +44,6 @@ function PillNav({
 
   return (
     <nav className={`${styles.pillNav} ${className} ${!isVisible ? styles.hidden : ''}`} style={{ backgroundColor: baseColor }}>
-      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
-        <LightPillar
-          topColor="#5227FF"
-          bottomColor="#FF9FFC"
-          intensity={1}
-          rotationSpeed={0.3}
-          glowAmount={0.002}
-          pillarWidth={3}
-          pillarHeight={0.4}
-          noiseIntensity={0.5}
-          pillarRotation={25}
-          interactive={false}
-          mixBlendMode="screen"
-          quality="high"
-        />
-      </div>
       <div className={styles.container} style={{ position: 'relative', zIndex: 2 }}>
         {/* Navigation Items */}
         <div className={styles.navItems}>
