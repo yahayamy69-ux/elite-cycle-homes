@@ -1,32 +1,76 @@
 .section {
-  padding: 4rem 2rem;
-  background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 100%);
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #cffafe 100%);
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .heading {
   text-align: center;
-  font-size: 1.75rem;
-  color: #1e3a5f;
-  margin: 0 0 2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e40af;
+  margin: 0 0 1rem;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #e0f2fe;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(30, 58, 95, 0.12);
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .grid.visible .card {
@@ -34,15 +78,39 @@
   transform: translateY(0);
 }
 
+.grid.visible .card:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.grid.visible .card:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.grid.visible .card:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 16px 48px rgba(37, 99, 235, 0.2);
+  transform: translateY(-8px);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
 .card h3 {
-  font-size: 1.1rem;
-  color: #1e3a5f;
-  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.3px;
 }
 
 .card p {
   font-size: 0.95rem;
-  line-height: 1.5;
-  color: #4b5563;
+  line-height: 1.7;
+  color: #475569;
   margin: 0;
 }

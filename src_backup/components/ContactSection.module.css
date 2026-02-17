@@ -1,93 +1,65 @@
 .section {
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #fff 100%);
+  padding: 4rem 2rem;
+  background: #fff;
   color: #1e3a5f;
-  border-top: 1px solid #cffafe;
-  position: relative;
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
+  border-top: 1px solid #dbeafe;
 }
 
 .wrap {
-  max-width: 1100px;
+  max-width: 960px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: start;
-  position: relative;
-  z-index: 1;
 }
 
 .heading {
-  font-size: 2rem;
-  font-weight: 800;
-  margin: 0 0 1.5rem;
-  color: #1e40af;
-  letter-spacing: -0.5px;
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  color: #1e3a5f;
 }
 
 .officeLabel,
 .socialLabel,
 .contactLabel {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #2563eb;
-  margin: 0 0 0.75rem;
-  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin: 0 0 0.5rem;
 }
 
 .contactBlocks {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .contactBlock {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  border: 1px solid #e0f2fe;
-  backdrop-filter: blur(10px);
+  gap: 0.25rem;
 }
 
 .contactBlockTitle {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #1e40af;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e3a5f;
 }
 
 .contactBlockLink {
-  color: #2563eb;
+  color: #1e40af;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: all 0.3s ease;
 }
 
 .contactBlockLink:hover {
-  color: #1e40af;
-  transform: translateX(4px);
+  text-decoration: underline;
 }
 
 .socialButtons {

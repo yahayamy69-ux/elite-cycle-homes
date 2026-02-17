@@ -1,0 +1,226 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  pointer-events: none;
+  animation: fadeOut 0.5s ease-in-out 1.8s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e3a8a 25%,
+    #172554 50%,
+    #1e1b4b 75%,
+    #0f172a 100%
+  );
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.moon {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at 30% 30%, #fff8e7 0%, #ffd700 50%, #ffed4e 100%);
+  border-radius: 50%;
+  top: 50px;
+  right: 100px;
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.5), 0 0 100px rgba(255, 215, 0, 0.3);
+  animation: moonGlow 2s ease-in-out infinite;
+}
+
+@keyframes moonGlow {
+  0%, 100% {
+    box-shadow: 0 0 60px rgba(255, 215, 0, 0.5), 0 0 100px rgba(255, 215, 0, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 80px rgba(255, 215, 0, 0.8), 0 0 120px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+  }
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 1.5s ease-in-out infinite;
+  animation-delay: var(--delay);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.textContainer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mainText {
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 0;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #fff8e7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+  letter-spacing: 2px;
+  animation: textPulse 2s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.subText {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 10px 0 0 0;
+  animation: fadeInText 1s ease-out 0.3s forwards;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lanterns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 3rem;
+  animation: fadeInText 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.lantern {
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: center top;
+  display: inline-block;
+}
+
+.lantern:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.lantern:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lantern:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+.mosque {
+  position: absolute;
+  bottom: 100px;
+  font-size: 6rem;
+  animation: fadeInText 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .mainText {
+    font-size: 3rem;
+  }
+
+  .subText {
+    font-size: 1rem;
+  }
+
+  .moon {
+    width: 120px;
+    height: 120px;
+    right: 40px;
+    top: 30px;
+  }
+
+  .lanterns {
+    gap: 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .mosque {
+    font-size: 4rem;
+    bottom: 50px;
+  }
+}
