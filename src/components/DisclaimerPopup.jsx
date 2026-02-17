@@ -1,18 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './DisclaimerPopup.module.css';
 
-const STORAGE_KEY = 'elite-cycle-disclaimer-seen';
-
 function DisclaimerPopup() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const seen = sessionStorage.getItem(STORAGE_KEY);
-    if (!seen) setVisible(true);
-  }, []);
+  const [visible, setVisible] = useState(true);
 
   const handleClose = () => {
-    sessionStorage.setItem(STORAGE_KEY, 'true');
     setVisible(false);
   };
 
@@ -21,17 +13,35 @@ function DisclaimerPopup() {
   return (
     <div className={styles.overlay} role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
       <div className={styles.modal}>
+        <h2 id="disclaimer-title" className={styles.title}>⚠️ IMPORTANT FRAUD ALERT</h2>
+        
+        <div className={styles.warningBox}>
+          <p className={styles.warningText}>
+            <strong>DO NOT PAY INTO PERSONAL ACCOUNTS</strong>
+          </p>
+          <p className={styles.warningText}>
+            Elite Cycle Homes Limited does <strong>NOT</strong> accept payments through personal bank accounts, mobile money transfers to individuals, or cash payments to unofficial agents.
+          </p>
+        </div>
+
+        <div className={styles.disclaimerBox}>
+          <h3 className={styles.disclaimerTitle}>BEWARE OF FRAUD</h3>
+          <p className={styles.text}>
+            Scammers regularly impersonate our company to defraud unsuspecting customers. Always verify payment details and communications directly through our official channels:
+          </p>
+          <ul className={styles.contactList}>
+            <li>📞 Phone: <strong>0707 274 4865</strong></li>
+            <li>📧 Email: <strong>elitecyclehomesltd@gmail.com</strong></li>
+            <li>📍 Office: <strong>NOVARE CENTRAL WUSE ZONE 5, ABUJA</strong></li>
+          </ul>
+          <p className={styles.text}>
+            <strong>Legal Disclaimer:</strong> Elite Cycle Homes Limited bears NO responsibility for any financial losses if you get scammed by fraudsters impersonating our company. Always verify authenticity before making any payment.
+          </p>
+        </div>
+
         <button type="button" className={styles.closeBtn} onClick={handleClose} aria-label="Close disclaimer">
           ✕
         </button>
-        <h2 id="disclaimer-title" className={styles.title}>Important Notice</h2>
-        <p className={styles.text}>
-          Elite Cycle Homes Limited does <strong>not</strong> accept payments for our services through personal bank accounts. 
-          Please beware of scammers who may impersonate our company. Always verify payment details directly with us before making any transactions.
-        </p>
-        <p className={styles.text}>
-          <strong>Disclaimer:</strong> Elite Cycle Homes bears no responsibility if you end up getting scammed by fraudsters impersonating our company. Always verify all communications and payment details directly through our official channels.
-        </p>
       </div>
     </div>
   );
