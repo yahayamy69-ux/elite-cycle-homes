@@ -2,9 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './MeetTheTeam.module.css';
 
 const TEAM = [
-  { name: 'Engr Abubakar A Yahaya', role: 'CEO', description: 'Driving vision and strategy for Elite Cycle Homes.', image: '/team-abubakar.png' },
-  { name: 'Engr Ahmad Nuhu', role: 'Head of Sites', description: 'Overseeing construction and site development.', image: '/team-ahmad.png' },
-  { name: 'Engr Yahaya Muhammad', role: 'Head of Digital Marketing', description: 'Driving digital presence and marketing initiatives.', image: '/team-yahaya.png' },
+  { name: 'Engr Abubakar', role: 'CEO', description: 'Driving vision and strategy for Elite Cycle Homes.', image: '/team-abubakar.png' },
+  { name: 'Barr Khadija', role: 'Head of Legal', description: 'Head of Legal at Elite Cycle Homes.', image: null },
 ];
 
 function MeetTheTeam() {
