@@ -3,7 +3,7 @@ import styles from './MeetTheTeam.module.css';
 
 const TEAM = [
   { name: 'Engr Abubakar', role: 'CEO', description: 'Driving vision and strategy for Elite Cycle Homes.', image: '/team-abubakar.png' },
-  { name: 'Barr Khadija', role: 'Head of Legal', description: 'Head of Legal at Elite Cycle Homes.', image: null },
+  { name: 'Barr Khadija', role: 'Head of Legal', description: 'Head of Legal at Elite Cycle Homes.', image: '/team-khadija.jpeg' },
 ];
 
 function MeetTheTeam() {
