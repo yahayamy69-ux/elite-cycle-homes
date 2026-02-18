@@ -4,7 +4,6 @@ import styles from './MeetTheTeam.module.css';
 const TEAM = [
   { name: 'Engr Abubakar A Yahaya', role: 'CEO', description: 'Driving vision and strategy for Elite Cycle Homes.', image: '/team-abubakar.png' },
   { name: 'Engr Ahmad Nuhu', role: 'Head of Sites', description: 'Overseeing construction and site development.', image: '/team-ahmad.png' },
-  { name: 'Engr Yasin Muhammad', role: 'Head of Sales', description: 'Leading sales strategy and client relations.', image: '/team-yasin.png' },
   { name: 'Engr Yahaya Muhammad', role: 'Head of Digital Marketing', description: 'Driving digital presence and marketing initiatives.', image: '/team-yahaya.png' },
 ];
 
