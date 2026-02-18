@@ -21,14 +21,14 @@ const RESPONSES = {
 • 500 SQM - 5 Bed Fully Detached: ₦16M - ₦21M
 • 1000 SQM - 8 Units Block of Flats: ₦32M - ₦41M
 
-**KARSANA/KATAMPE EXT. (HILLTOP)**
+**KUBWA EXPRESSWAY/KATAMPE EXT. (HILLTOP)**
 • 150 SQM - 3 Bed Terrace Duplex: ₦2.5M
 • 250 SQM - 4 Bed Terrace Duplex: ₦3.5M
 • 300 SQM - 4 Bed Semi-Detached: ₦4.5M
 • 500 SQM - 5 Bed Fully Detached: ₦6.5M
 • 1000 SQM - Block of Apartments: ₦12.5M
 
-**KARSANA/KATAMPE EXT. (PREMIUM)**
+**KUBWA EXPRESSWAY/KATAMPE EXT. (PREMIUM)**
 • 400 SQM - 5 Bed Detached Duplex: ₦25M - ₦30M
 • 4 Bed Terrace Duplex: ₦22.5M
 • 5 Bed Fully Detached: ₦50M - ₦100M
@@ -45,8 +45,8 @@ const RESPONSES = {
     response: 'Our estate features include gated security, 24/7 power supply, excellent drainage systems, modern architecture, and a serene environment. Visit our Estate Features page for more details.'
   },
   location: {
-    keywords: ['location', 'where', 'address', 'site', 'locations', 'areas', 'idu', 'karsana', 'katampe', 'apo'],
-    response: 'Elite Cycle Homes has premium locations:\n📍 IDU BY TRAIN STATION\n📍 KARSANA/KATAMPE EXT. (HILLTOP)\n📍 APO\n\nCheck our Locations page to explore all site details and amenities.'
+    keywords: ['location', 'where', 'address', 'site', 'locations', 'areas', 'idu', 'kubwa', 'katampe', 'apo'],
+    response: 'Elite Cycle Homes has premium locations:\n📍 IDU BY TRAIN STATION\n📍 KUBWA EXPRESSWAY/KATAMPE EXT. (HILLTOP)\n📍 APO\n\nCheck our Locations page to explore all site details and amenities.'
   },
   contact: {
     keywords: ['contact', 'call', 'phone', 'email', 'reach', 'how to contact', 'contact us'],

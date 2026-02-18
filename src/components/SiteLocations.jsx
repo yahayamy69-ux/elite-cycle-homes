@@ -19,7 +19,7 @@ const LOCATIONS = [
     image: '/location-apoguide.png',
   },
   {
-    title: 'Karsana',
+    title: 'Kubwa Expressway',
     description: 'Premium residential development in a well-planned district. Modern homes designed for contemporary lifestyles.',
     image: '/location-karsana.png',
   },

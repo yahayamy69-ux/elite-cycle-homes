@@ -41,7 +41,7 @@ function AffiliateAgents() {
         <p className={styles.greeting}>Assalamu Alaikum and welcome!</p>
         
         <div className={styles.mainText}>
-          <p>We're excited to have you on board. Elite Cycle Homes is a fast-growing real estate development company with active projects across <strong>Katampe Extension, Karsana, Idu, Apo-Gude, and ACO Lugbe</strong>, and we are expanding our team of serious, result-driven Sales Associates.</p>
+          <p>We're excited to have you on board. Elite Cycle Homes is a fast-growing real estate development company with active projects across <strong>Katampe Extension, Kubwa Expressway, Idu, Apo-Gude, and ACO Lugbe</strong>, and we are expanding our team of serious, result-driven Sales Associates.</p>
         </div>
 
         <div className={styles.highlightBox}>
